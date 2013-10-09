@@ -3,8 +3,37 @@
 	<link href="css/styles.css" rel="stylesheet" type="text/css" />
 	<link href='http://fonts.googleapis.com/css?family=Finger+Paint' rel='stylesheet' type='text/css'>
   	<title>Book Review Haiku</title>
+/*  	<style>
+  	body {
+  		text-align: center;
+  		background: #FFF;
+		font-family: Arial;
+		font-size: 12px;
+		letter-spacing: 0px;
+	}
+	p:hover {
+	      background: pink;
+	      cursor: pointer;
+	}
+	h5 {
+	    background: #CCC;
+		letter-spacing: 3px;
+		width: 200px;
+		margin: 20px auto;
+	}
+	input, button {
+		border: 1px solid black;
+		padding: 5px;
+	}
+	.done{
+		color:gray;
+		font-weight: bold;
+		text-decoration: line-through;
+	}
+  </style>*/
 </head>
 <body>
+	<h1>Book Review Haiku</h1>
 	<div class="container">
 		<div id="da_form">
 		<form method="post" action="/add">
@@ -19,7 +48,7 @@
 		<div id="results">
 			<ul>
 			<% @result.each do |r| %>
-				<li><%= r[0] %> - <%= r[1] %> - <%= r[2] %></li>
+				<li><%= r[0] %> ⦿ <%= r[1] %> ❦ <%= r[2] %></li>
 			<% end %>
 			</ul>
 		</div>
