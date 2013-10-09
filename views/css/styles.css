@@ -1,0 +1,11 @@
+body
+{
+	background-color: red;
+	background-image: url('images/paper.jpg');
+	background-repeat: no-repeat;
+}
+
+.container
+{
+	padding: 20px;
+}

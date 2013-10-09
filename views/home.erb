@@ -1,0 +1,28 @@
+<html>
+<head>
+	<link href="css/styles.css" rel="stylesheet" type="text/css" />
+	<link href='http://fonts.googleapis.com/css?family=Finger+Paint' rel='stylesheet' type='text/css'>
+  	<title>Book Review Haiku</title>
+</head>
+<body>
+	<div class="container">
+		<div id="da_form">
+		<form method="post" action="/add">
+			<input type="text" name="title" placeholder="enter book title">
+			<input type="text" name="author" placeholder="enter author">
+			<textarea name="review" cols="25" rows="5">
+			Enter your review haiku here...5/7/5
+			</textarea>
+			<input type="submit" value="Add Review Haiku" />
+		</form>
+		</div>
+		<div id="results">
+			<ul>
+			<% @result.each do |r| %>
+				<li><%= r[0] %> - <%= r[1] %> - <%= r[2] %></li>
+			<% end %>
+			</ul>
+		</div>
+	</div> <!-- end container div -->
+</body>
+</html>
