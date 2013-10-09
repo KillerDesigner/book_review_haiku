@@ -12,4 +12,4 @@ Bonus items!
 * WARNING: do not attempt any of these at 12am!!! Instead GO TO BED! <stern face of Oz>
 
 5. Each book title will include a link to the Google books API description of the book
-6. Your app will have a complete set of styles
+6. Your app has a pretty sweet user interface so it's beautiful and fun to use ☺
