@@ -1,0 +1,44 @@
+body
+{
+	/*background-color: red;*/
+	width: 100%;
+	background-image: url('sand-garden.jpg');
+	background-size:100%;
+	background-repeat:no-repeat;
+}
+.heading
+{
+	text-decoration-color: red;
+	text-transform: uppercase;
+ 	text-align: center;
+  	font-family: 'Underdog';
+  	font-size: 60px;
+}
+.container
+{
+	text-align: left;
+	padding: 20px;
+	vertical-align: center;
+	margin-left: auto;
+  	margin-right: auto;
+}
+#books
+{
+	border-spacing: 20px;
+	font-size: 20px;
+	font-family: Arial;
+}
+#da_form
+{
+	vertical-align: bottom;
+	border: 1px;
+	padding: 50px;
+	display: inline-block;
+  	position: relative;
+  	text-align: right;
+}
+#haiku
+{
+	position: relative;
+	display: inline-table;
+}
