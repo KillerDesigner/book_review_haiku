@@ -1,14 +1,40 @@
 body
 {
-	/*background-color: red;*/
 	width: 100%;
 	background-image: url('sand-garden.jpg');
 	background-size:100%;
 	background-repeat:no-repeat;
 }
+a:link, a:visited {
+  color: black ;
+  background-color: transparent ;
+  text-decoration: none;
+  font-weight: bold;
+  font-family: Arial;
+}
+a:hover {
+  color: darkred;
+  text-decoration: underline; 
+}
+.fields 
+{
+	border: 2px solid black;
+	width: 100%;
+	font-family: Arial;
+	font-size: 14;
+}
+#book-box
+{
+	background-color: white;
+	opacity:0.6;
+}
+textarea:focus, input:focus
+{
+    outline: 5px border;
+}
 .heading
 {
-	text-decoration-color: red;
+	padding-top: 50px;
 	text-transform: uppercase;
  	text-align: center;
   	font-family: 'Underdog';
@@ -16,26 +42,34 @@ body
 }
 .container
 {
-	text-align: left;
-	padding: 20px;
-	vertical-align: center;
+	width: 800;
+	text-align: center;
+	padding: 5px;
 	margin-left: auto;
   	margin-right: auto;
 }
-#books
-{
-	border-spacing: 20px;
-	font-size: 20px;
-	font-family: Arial;
+.clear 
+{ 
+	clear: both;
 }
 #da_form
 {
-	vertical-align: bottom;
-	border: 1px;
-	padding: 50px;
-	display: inline-block;
-  	position: relative;
-  	text-align: right;
+	width: 250px; 
+	border: 1px solid black; 
+	float: left;
+	padding: 10px;
+	text-align: left;
+}
+#books
+{
+	background-color: white;
+	opacity:0.5;
+	font-family: 'Stint Ultra Expanded';
+	width: 350px; 
+	border: 0; 
+	float: right;
+	font-size: 16px;
+	text-align: center;
 }
 #haiku
 {

@@ -11,17 +11,18 @@ db = SQLite3::Database.new( 'booklist.sqlite3' )
 @book_description
 
 # return a list of all books in the database
-get '/home/' do
-  @result = db.execute( "SELECT * FROM books;" )
+get '/' do
+  @result = db.execute( "SELECT * FROM books ORDER BY RANDOM() LIMIT 3;" )
   puts "*********************"
-  puts @result.description
+  puts @result
   puts "@@@@@@@@@@@@@@@@@@@"
   erb :home
 end
 
-get '/book_info/:title' do
+#get '/book_info/:title' do
+get '/:title' do
    @book_title = params[:title]
-   @book_title.chomp.gsub(/' '/, '+')
+   @book_title.chomp.gsub!(' ', '+')
    puts "@@@@@@@@@@@@@"
    puts @book_title
    puts "%%%%%%%%%%%"
@@ -37,7 +38,8 @@ end
 
 # add a book to the books table
 post '/add' do
-  sql = "insert into books values ('#{params[:title]}', '#{params[:author]}', '#{params[:review]}')"
+  haiku = params[:review].gsub!("'", "''")
+  sql = "insert into books values ('#{params[:title]}', '#{params[:author]}', '#{haiku}')"
   db.execute( sql)
   redirect '/'
 end

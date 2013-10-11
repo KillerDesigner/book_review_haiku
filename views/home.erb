@@ -2,33 +2,28 @@
 <head>
 	<link href="styles.css" rel="stylesheet" type="text/css" />
 	<link href='http://fonts.googleapis.com/css?family=Underdog' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Stint+Ultra+Expanded">
   	<title>Book Review Haiku</title>
 </head>
 <body>
 	<h1 class="heading">Book Review Haiku</h1>
 	<div class="container">
 		<div id="books">
-			<ul>
 			<% @result.each do |r| %>
-				<li><i><b><%= r[0] %></b></i></li> 
-				⦿ <%= r[1] %> ❦ 
-				<div id="haiku">
-					<%= r[2] %>
-				</div>
+			<p><a href="#" onclick="alert('hi');"><%= r[0] %></a></p>
+			<p>⦿ <%= r[1] %> </p>
+			<p><%= r[2] %></p>
 			<% end %>
-			</ul>
-			<% @book_title %>
 		</div>
 		<div id="da_form">
-		<form method="post" action="/home">
-			<input type="text" name="title" placeholder="enter book title">
-			<input type="text" name="author" placeholder="enter author"><br>
-			<textarea name="review" cols="25" rows="5">Enter your review haiku here...5/7/5
-			</textarea><br>
-			<input type="submit" value="Add Review Haiku" />
-		</form>
-		</div>
-
+			<form method="post" action="/add">
+			<input type="text" name="title" placeholder="enter book title" class="fields">
+			<input type="text" name="author" placeholder="enter author" class="fields">
+			<textarea name="review" cols="25" rows="5" class="fields">Enter your review haiku here...5/7/5
+			</textarea>
+			<input type="submit" value="Add Review Haiku" class="button"/>
+		   	</form>
+	  	</div>
 	</div> <!-- end container div -->
 </body>
 </html>
