@@ -13,9 +13,9 @@ db = SQLite3::Database.new( 'booklist.sqlite3' )
 # return a list of all books in the database
 get '/' do
   @result = db.execute( "SELECT * FROM books ORDER BY RANDOM() LIMIT 3;" )
-  puts "*********************"
-  puts @result
-  puts "@@@@@@@@@@@@@@@@@@@"
+  # puts "*********************"
+  # puts @result
+  # puts "@@@@@@@@@@@@@@@@@@@"
   erb :home
 end
 
@@ -38,8 +38,17 @@ end
 
 # add a book to the books table
 post '/add' do
-  haiku = params[:review].gsub!("'", "''")
+	if params[:review].include?("'")
+  	  haiku = params[:review].gsub!("'", "''")
+  	else
+  	  haiku = params[:review]
+  	end
+  #haiku = db.prepare(params[:review]) #why this not work?!
+  puts "@@@@@@@@"
+  puts haiku
+  puts params[:review]
+  puts "********"
   sql = "insert into books values ('#{params[:title]}', '#{params[:author]}', '#{haiku}')"
-  db.execute( sql)
+  db.execute(sql)
   redirect '/'
 end

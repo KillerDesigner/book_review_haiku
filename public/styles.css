@@ -1,7 +1,8 @@
 body
 {
 	width: 100%;
-	background-image: url('sand-garden.jpg');
+	/*background-image: url('sand-garden.jpg');*/
+	background-image: url('japanese-maple.jpg');
 	background-size:100%;
 	background-repeat:no-repeat;
 }
@@ -23,6 +24,13 @@ a:hover {
 	font-family: Arial;
 	font-size: 14;
 }
+.haiku_input
+{
+	border: 2px solid black;
+	width: 100%;
+	font-family: Arial;
+	font-size: 14;
+}
 #book-box
 {
 	background-color: white;
@@ -34,7 +42,10 @@ textarea:focus, input:focus
 }
 .heading
 {
-	padding-top: 50px;
+	background-color: white;
+	opacity: .6;
+	padding-top: 30px;
+	padding-bottom: 40px;
 	text-transform: uppercase;
  	text-align: center;
   	font-family: 'Underdog';
@@ -54,10 +65,12 @@ textarea:focus, input:focus
 }
 #da_form
 {
-	width: 250px; 
+	width: 300px; 
+	opacity:0.7;
+	background-color: white;
 	border: 1px solid black; 
 	float: left;
-	padding: 10px;
+	padding: 20px;
 	text-align: left;
 }
 #books
@@ -93,7 +106,7 @@ button.css3button {
 	-moz-border-radius: 0px;
 	-webkit-border-radius: 0px;
 	border-radius: 0px;
-	border: 1px solid #260d0d;
+	border: 5px solid black;
 	-moz-box-shadow:
 		0px 1px 3px rgba(000,000,000,0.5),
 		inset 0px 0px 2px rgba(255,255,255,0.7);
